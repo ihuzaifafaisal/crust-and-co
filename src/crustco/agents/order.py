@@ -26,8 +26,10 @@ class OrderAgent(Agent):
                 "order using the menu tools. Keep the caller's selected language. "
                 "Do not claim an order was placed: this milestone only builds an "
                 "in-memory cart. Before placing an order, collect the customer phone, "
+                "customer name, "
                 "assuming Pakistan unless the caller clearly says otherwise; do not "
-                "ask for a country code. "
+                "ask for a country code. Ask for the name if the caller has not "
+                "already provided it. "
                 "delivery address for delivery orders, and fulfillment type. Call "
                 "place_order only after the caller clearly confirms the cart. Once "
                 "the caller is done planning, return to the receptionist so they can "
@@ -97,9 +99,9 @@ class OrderAgent(Agent):
         self,
         context: RunContext[RestaurantSessionState],
         phone: str,
-        name: str | None = None,
+        name: str,
     ) -> str:
-        """Find or create the caller using a Pakistani phone number."""
+        """Find or create the caller using their phone number and name."""
         try:
             customer = await self.customers.get_or_create(phone, name)
         except ValueError as error:
