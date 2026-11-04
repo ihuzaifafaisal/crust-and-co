@@ -137,6 +137,11 @@
       "id": 4,
       "phone": "+923008736321",
       "name": "Junaid"
+    },
+    {
+      "id": 5,
+      "phone": "+923242323232",
+      "name": "Ali"
     }
   ],
   "customer_addresses": [
@@ -174,6 +179,15 @@
       "address": "243-Z, Gulshan-e-Ravi, Lahore",
       "latitude": 31.5493928,
       "longitude": 74.281075,
+      "is_default": true
+    },
+    {
+      "id": 5,
+      "customer_id": 5,
+      "label": "Home",
+      "address": "Etihad Town, Lahore",
+      "latitude": 31.4605296,
+      "longitude": 74.4291866,
       "is_default": true
     }
   ],
@@ -213,6 +227,15 @@
       "fulfillment_type": "delivery",
       "total_rupees": 1748,
       "created_at": "2026-11-04T08:29:28.162722+00:00"
+    },
+    {
+      "id": 5,
+      "customer_id": 5,
+      "branch_id": 3,
+      "status": "pending",
+      "fulfillment_type": "delivery",
+      "total_rupees": 1169,
+      "created_at": "2026-11-04T11:45:13.562744+00:00"
     }
   ],
   "order_status_history": [
@@ -244,6 +267,12 @@
       "order_id": 4,
       "status": "pending",
       "changed_at": "2026-11-04T08:29:28.162722+00:00",
+      "note": null
+    },
+    {
+      "order_id": 5,
+      "status": "pending",
+      "changed_at": "2026-11-04T11:45:13.562744+00:00",
       "note": null
     }
   ],

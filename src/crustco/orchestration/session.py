@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import os
 
-from livekit.agents import AgentSession, TurnHandlingOptions, inference
+from livekit.agents import AgentSession, TurnHandlingOptions, inference, room_io
+from livekit.plugins import noise_cancellation
 
 from ..config import Model, Voice
 from .state import RestaurantSessionState
@@ -20,4 +21,13 @@ def build_session(state: RestaurantSessionState) -> AgentSession:
             turn_detection=inference.TurnDetector(),
         ),
         userdata=state,
+    )
+
+
+def build_room_options() -> room_io.RoomOptions:
+    """Configure enhanced cancellation for the caller's incoming audio."""
+    return room_io.RoomOptions(
+        audio_input=room_io.AudioInputOptions(
+            noise_cancellation=noise_cancellation.BVC(),
+        ),
     )

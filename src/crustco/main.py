@@ -11,7 +11,7 @@ load_dotenv()
 
 # Keep the server entrypoint thin; session construction lives in orchestration.
 from .agents.receptionist import ReceptionistAgent
-from .orchestration.session import build_session
+from .orchestration.session import build_room_options, build_session
 from .orchestration.state import RestaurantSessionState
 
 logger = logging.getLogger("crustco.main")
@@ -26,6 +26,7 @@ async def entrypoint(ctx: agents.JobContext) -> None:
     await session.start(
         agent=ReceptionistAgent(),
         room=ctx.room,
+        room_options=build_room_options(),
     )
     logger.info(
         "latency event=session_started elapsed_ms=%.2f",

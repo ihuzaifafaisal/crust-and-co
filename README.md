@@ -34,6 +34,11 @@ lk agent console src\crustco\main.py
 The `lk agent console` command starts the local single-session console documented
 by LiveKit. It does not connect media transport to a LiveKit room.
 
+Incoming caller audio uses LiveKit Cloud Krisp voice isolation before turn
+detection and speech-to-text. This suppresses competing background voices.
+Do not apply a second enhanced noise-cancellation filter in a client or
+frontend; standard WebRTC echo cancellation may remain enabled.
+
 ## Mock data
 
 The demo keeps its seed data in

@@ -9,6 +9,7 @@ description = "Console voice support foundation for Crust & Co."
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "livekit-agents==1.8.10",
+    "livekit-plugins-noise-cancellation~=0.3",
     "pydantic>=2,<3",
     "python-dotenv>=1.1,<2",
 ]
