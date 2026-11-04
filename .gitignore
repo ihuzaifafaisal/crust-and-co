@@ -1,0 +1,64 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+venv/
+env/
+.python-version
+
+# Python caches and build output
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.pyright/
+.pytest_cache/
+.ruff_cache/
+.tox/
+.nox/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+build/
+dist/
+*.egg-info/
+
+# Local application data
+data/**/*.tmp
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+*.log
+console-recordings/
+
+# IDE and editor files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.code-workspace
+
+# Local AI and MCP tooling
+.agents/
+.claude/
+.gemini/
+.mcp.json
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~

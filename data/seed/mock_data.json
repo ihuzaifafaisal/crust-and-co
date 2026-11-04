@@ -1,0 +1,260 @@
+{
+  "branches": [
+    {
+      "id": 1,
+      "name": "Gulberg",
+      "latitude": 31.5204,
+      "longitude": 74.3587,
+      "is_active": true
+    },
+    {
+      "id": 2,
+      "name": "Johar Town",
+      "latitude": 31.4697,
+      "longitude": 74.2728,
+      "is_active": true
+    },
+    {
+      "id": 3,
+      "name": "DHA",
+      "latitude": 31.4697,
+      "longitude": 74.4105,
+      "is_active": true
+    },
+    {
+      "id": 4,
+      "name": "Model Town",
+      "latitude": 31.4826,
+      "longitude": 74.3262,
+      "is_active": true
+    },
+    {
+      "id": 5,
+      "name": "Bahria Town",
+      "latitude": 31.3683,
+      "longitude": 74.1818,
+      "is_active": true
+    }
+  ],
+  "menu_items": [
+    {
+      "id": 1,
+      "category": "Pizzas",
+      "name": "Margherita",
+      "size": "Regular",
+      "description": "Classic tomato, mozzarella, and basil pizza.",
+      "price_rupees": 899,
+      "modifiers": [],
+      "is_available": true
+    },
+    {
+      "id": 2,
+      "category": "Pizzas",
+      "name": "Chicken Fajita",
+      "size": "Regular",
+      "description": "Spiced chicken, peppers, onions, and mozzarella.",
+      "price_rupees": 1099,
+      "modifiers": [
+        {
+          "name": "Extra Cheese",
+          "price_delta_rupees": 150
+        },
+        {
+          "name": "Jalapenos",
+          "price_delta_rupees": 100
+        }
+      ],
+      "is_available": true
+    },
+    {
+      "id": 3,
+      "category": "Pizzas",
+      "name": "Pepperoni",
+      "size": "Regular",
+      "description": "Pepperoni, tomato sauce, and mozzarella.",
+      "price_rupees": 1199,
+      "modifiers": [
+        {
+          "name": "Extra Cheese",
+          "price_delta_rupees": 150
+        }
+      ],
+      "is_available": true
+    },
+    {
+      "id": 4,
+      "category": "Sides",
+      "name": "Garlic Bread",
+      "size": "Regular",
+      "description": "Toasted garlic bread with herb butter.",
+      "price_rupees": 299,
+      "modifiers": [
+        {
+          "name": "Garlic Dip",
+          "price_delta_rupees": 50
+        }
+      ],
+      "is_available": true
+    },
+    {
+      "id": 5,
+      "category": "Sides",
+      "name": "Loaded Fries",
+      "size": "Regular",
+      "description": "Crispy fries with cheese and house sauce.",
+      "price_rupees": 399,
+      "modifiers": [],
+      "is_available": true
+    },
+    {
+      "id": 6,
+      "category": "Drinks",
+      "name": "Coca-Cola",
+      "size": "Can",
+      "description": "Chilled Coca-Cola can.",
+      "price_rupees": 120,
+      "modifiers": [],
+      "is_available": true
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "phone": "+923001234567",
+      "name": "Demo Customer"
+    },
+    {
+      "id": 2,
+      "phone": "+923241234456",
+      "name": "Ahsan"
+    },
+    {
+      "id": 3,
+      "phone": "+923454123553",
+      "name": "Ramiq"
+    },
+    {
+      "id": 4,
+      "phone": "+923008736321",
+      "name": "Junaid"
+    }
+  ],
+  "customer_addresses": [
+    {
+      "id": 1,
+      "customer_id": 1,
+      "label": "Home",
+      "address": "Gulberg III, Lahore",
+      "is_default": true,
+      "latitude": 31.5204,
+      "longitude": 74.3587
+    },
+    {
+      "id": 2,
+      "customer_id": 2,
+      "label": "Home",
+      "address": "245-C, Green Town, Lahore",
+      "latitude": 31.4320546,
+      "longitude": 74.3074652,
+      "is_default": true
+    },
+    {
+      "id": 3,
+      "customer_id": 3,
+      "label": "Home",
+      "address": "325-D, Samanabad, Lahore",
+      "latitude": 31.5403203,
+      "longitude": 74.3022952,
+      "is_default": true
+    },
+    {
+      "id": 4,
+      "customer_id": 4,
+      "label": "Home",
+      "address": "243-Z, Gulshan-e-Ravi, Lahore",
+      "latitude": 31.5493928,
+      "longitude": 74.281075,
+      "is_default": true
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customer_id": 1,
+      "branch_id": 1,
+      "status": "preparing",
+      "fulfillment_type": "delivery",
+      "total_rupees": 1049,
+      "created_at": "2026-11-01T12:00:00+00:00"
+    },
+    {
+      "id": 2,
+      "customer_id": 2,
+      "branch_id": 2,
+      "status": "pending",
+      "fulfillment_type": "delivery",
+      "total_rupees": 1169,
+      "created_at": "2026-11-04T08:21:22.550547+00:00"
+    },
+    {
+      "id": 3,
+      "customer_id": 3,
+      "branch_id": 1,
+      "status": "pending",
+      "fulfillment_type": "delivery",
+      "total_rupees": 1748,
+      "created_at": "2026-11-04T08:26:14.525218+00:00"
+    },
+    {
+      "id": 4,
+      "customer_id": 4,
+      "branch_id": 1,
+      "status": "pending",
+      "fulfillment_type": "delivery",
+      "total_rupees": 1748,
+      "created_at": "2026-11-04T08:29:28.162722+00:00"
+    }
+  ],
+  "order_status_history": [
+    {
+      "order_id": 1,
+      "status": "pending",
+      "changed_at": "2026-11-01T12:00:00+00:00",
+      "note": null
+    },
+    {
+      "order_id": 1,
+      "status": "preparing",
+      "changed_at": "2026-11-01T12:10:00+00:00",
+      "note": null
+    },
+    {
+      "order_id": 2,
+      "status": "pending",
+      "changed_at": "2026-11-04T08:21:22.550547+00:00",
+      "note": null
+    },
+    {
+      "order_id": 3,
+      "status": "pending",
+      "changed_at": "2026-11-04T08:26:14.525218+00:00",
+      "note": null
+    },
+    {
+      "order_id": 4,
+      "status": "pending",
+      "changed_at": "2026-11-04T08:29:28.162722+00:00",
+      "note": null
+    }
+  ],
+  "complaints": [
+    {
+      "id": 1,
+      "customer_id": 4,
+      "order_id": null,
+      "message": "Order is still pending.",
+      "status": "open",
+      "created_at": "2026-11-04T08:34:13.766896+00:00"
+    }
+  ]
+}
